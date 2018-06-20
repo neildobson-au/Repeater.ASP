@@ -1,0 +1,6 @@
+﻿@model Models.AustralianHomesViewModel
+
+@foreach (var state in Model.States)
+{
+    @await Html.PartialAsync("State", state)
+}

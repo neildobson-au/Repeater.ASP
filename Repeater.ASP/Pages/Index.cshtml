@@ -1,0 +1,12 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="row">
+    <h2>Homes</h2>
+    <form method="POST">
+        @await Html.PartialAsync("Shared/AustralianHomesViewModel", Model.AustralianHomes)
+    </form>
+</div>
