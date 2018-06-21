@@ -4,9 +4,14 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="row">
-    <h2>Homes</h2>
+<div class="container-fluid mt-3 mb-3">
+    <div class="row">
+        <div class="col">
+            <h2>Australian Homes</h2>
+        </div>
+    </div>
     <form method="POST">
         @await Html.PartialAsync("Shared/AustralianHomesViewModel", Model.AustralianHomes)
     </form>
 </div>
+
