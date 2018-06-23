@@ -1,0 +1,35 @@
+﻿@model Models.Home
+
+@{
+  var modelId = Html.IdForModel();
+  var homeContentCardHeaderId = $"{modelId}_homeContentCardHeader";
+  var homeContentId = $"{modelId}_homeContent";
+}
+
+<div class="row">
+  <div class="col">
+    <div class="card mb-1">
+      <div class="card-header alert-danger" id="@homeContentCardHeaderId">
+        <a data-toggle="collapse" href="#@homeContentId">
+          >>> Home: @Model.Number
+        </a>
+      </div>
+      <div id="@homeContentId" class="collapse">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label asp-for="Number" class="control-label"></label>
+                <div class="col">
+                  <input asp-for="Number" class="form-control" />
+                </div>
+                <span asp-validation-for="Number" class="text-danger"></span>
+              </div>
+            </div>
+          </div>
+          @Html.EditorFor(m => m.Rooms)
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

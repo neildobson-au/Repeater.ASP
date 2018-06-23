@@ -1,0 +1,52 @@
+﻿@model Models.Room
+
+@{
+  var modelId = Html.IdForModel();
+  var roomContentCardHeaderId = $"{modelId}_roomContentCardHeader";
+  var roomContentId = $"{modelId}_roomContent";
+}
+
+<div class="row">
+  <div class="col">
+    <div class="card mb-1">
+      <div class="card-header alert-warning" id="@roomContentCardHeaderId">
+        <a data-toggle="collapse" href="#@roomContentId">
+          >>>> Room: @Model.Name
+        </a>
+      </div>
+      <div id="@roomContentId" class="collapse">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group row">
+                <label asp-for="Name" class="control-label"></label>
+                <div class="col">
+                  <input asp-for="Name" class="form-control" />
+                </div>
+                <span asp-validation-for="Name" class="text-danger"></span>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group row">
+                <label asp-for="Length" class="control-label"></label>
+                <div class="col">
+                  <input asp-for="Length" class="form-control" />
+                </div>
+                <span asp-validation-for="Length" class="text-danger"></span>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group row">
+                <label asp-for="Width" class="control-label"></label>
+                <div class="col">
+                  <input asp-for="Width" class="form-control" />
+                </div>
+                <span asp-validation-for="Width" class="text-danger"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

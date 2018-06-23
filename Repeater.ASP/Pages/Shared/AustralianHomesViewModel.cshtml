@@ -1,8 +1,0 @@
-﻿@model Models.AustralianHomesViewModel
-
-@foreach (var state in Model.States)
-{
-<div class="row">
-    @await Html.PartialAsync("State", state)
-</div>
-}

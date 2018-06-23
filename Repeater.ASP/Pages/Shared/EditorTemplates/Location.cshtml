@@ -1,0 +1,44 @@
+﻿@model Models.Location
+
+@{
+  var modelId = Html.IdForModel();
+  var locationContentCardHeaderId = $"{modelId}_locationContentCardHeader";
+  var locationContentId = $"{modelId}_locationContent";
+}
+
+<div class="row">
+  <div class="col">
+    <div class="card mb-1">
+      <div class="card-header alert-secondary" id="@locationContentCardHeaderId">
+        <a data-toggle="collapse" href="#@locationContentId">
+          > Location: @Model.Suburb
+        </a>
+      </div>
+      <div id="@locationContentId" class="collapse">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label asp-for="Suburb" class="control-label"></label>
+                <div class="col">
+                  <input asp-for="Suburb" class="form-control" />
+                </div>
+                <span asp-validation-for="Suburb" class="text-danger"></span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label asp-for="PostCode" class="control-label"></label>
+                <div class="col">
+                  <input asp-for="PostCode" class="form-control" />
+                </div>
+                <span asp-validation-for="PostCode" class="text-danger"></span>
+              </div>
+            </div>
+          </div>
+          @Html.EditorFor(m => m.Streets)
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

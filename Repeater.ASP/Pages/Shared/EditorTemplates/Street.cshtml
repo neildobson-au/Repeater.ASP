@@ -1,0 +1,35 @@
+﻿@model Models.Street
+
+@{
+  var modelId = Html.IdForModel();
+  var streetContentCardHeaderId = $"{modelId}_streetContentCardHeader";
+  var streetContentId = $"{modelId}_streetContent";
+}
+
+<div class="row">
+  <div class="col">
+    <div class="card mb-1">
+      <div class="card-header alert-success" id="@streetContentCardHeaderId">
+        <a data-toggle="collapse" href="#@streetContentId">
+          >> Street: @Model.Name
+        </a>
+      </div>
+      <div id="@streetContentId" class="collapse">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label asp-for="Name" class="control-label"></label>
+                <div class="col">
+                  <input asp-for="Name" class="form-control" />
+                </div>
+                <span asp-validation-for="Name" class="text-danger"></span>
+              </div>
+            </div>
+          </div>
+          @Html.EditorFor(m => m.Homes)
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
