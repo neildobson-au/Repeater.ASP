@@ -6,12 +6,10 @@
 }
 
 @Html.EditorFor(m => m.States)
-<div class="row">
-  <button id="@addButtonId" type="button" class="btn btn-outline-primary"
-          data-repeater-add-button=""
-          data-repeater-id="@Html.IdFor(m => m.States)"
-          data-repeater-name="@Html.NameFor(m => m.States)">
-    Add State
-  </button>
-</div>
+<button id="@addButtonId" type="button" class="btn btn-outline-primary"
+        data-repeater-add-button=""
+        data-repeater-id="@Html.IdFor(m => m.States)"
+        data-repeater-name="@Html.NameFor(m => m.States)">
+  Add State
+</button>
 

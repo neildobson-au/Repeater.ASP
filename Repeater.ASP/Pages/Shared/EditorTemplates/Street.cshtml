@@ -31,14 +31,12 @@
             </div>
           </div>
           @Html.EditorFor(m => m.Homes)
-          <div class="row">
-            <button id="@addButtonId" type="button" class="btn btn-outline-danger"
-                    data-repeater-add-button=""
-                    data-repeater-id="@Html.IdFor(m => m.Homes)"
-                    data-repeater-name="@Html.NameFor(m => m.Homes)">
-              Add Home
-            </button>
-          </div>
+          <button id="@addButtonId" type="button" class="btn btn-outline-danger"
+                  data-repeater-add-button=""
+                  data-repeater-id="@Html.IdFor(m => m.Homes)"
+                  data-repeater-name="@Html.NameFor(m => m.Homes)">
+            Add Home
+          </button>
         </div>
       </div>
     </div>

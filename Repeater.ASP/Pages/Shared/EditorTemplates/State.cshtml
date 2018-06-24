@@ -40,14 +40,12 @@
             </div>
           </div>
           @Html.EditorFor(m => m.Locations)
-          <div class="row">
-            <button id="@addButtonId" type="button" class="btn btn-outline-secondary"
-                    data-repeater-add-button=""
-                    data-repeater-id="@Html.IdFor(m => m.Locations)"
-                    data-repeater-name="@Html.NameFor(m => m.Locations)">
-              Add Location
-            </button>
-          </div>
+          <button id="@addButtonId" type="button" class="btn btn-outline-secondary"
+                  data-repeater-add-button=""
+                  data-repeater-id="@Html.IdFor(m => m.Locations)"
+                  data-repeater-name="@Html.NameFor(m => m.Locations)">
+            Add Location
+          </button>
         </div>
       </div>
     </div>
