@@ -2,11 +2,13 @@
 
 @{
   var modelId = Html.IdForModel();
+  var repeaterRowId = $"{modelId}_repeaterRow";
   var streetContentCardHeaderId = $"{modelId}_streetContentCardHeader";
   var streetContentId = $"{modelId}_streetContent";
+  var addButtonId = $"{modelId}_addButton";
 }
 
-<div class="row">
+<div id="@repeaterRowId" class="row" data-repeater-row="@modelId">
   <div class="col">
     <div class="card mb-1">
       <div class="card-header alert-success" id="@streetContentCardHeaderId">
@@ -28,6 +30,14 @@
             </div>
           </div>
           @Html.EditorFor(m => m.Homes)
+          <div class="row">
+            <button id="@addButtonId" type="button" class="btn btn-outline-danger"
+                    data-repeater-add-button=""
+                    data-repeater-id="@Html.IdFor(m => m.Homes)"
+                    data-repeater-name="@Html.NameFor(m => m.Homes)">
+              Add Home
+            </button>
+          </div>
         </div>
       </div>
     </div>

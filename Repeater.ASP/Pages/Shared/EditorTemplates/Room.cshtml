@@ -2,11 +2,12 @@
 
 @{
   var modelId = Html.IdForModel();
+  var repeaterRowId = $"{modelId}_repeaterRow";
   var roomContentCardHeaderId = $"{modelId}_roomContentCardHeader";
   var roomContentId = $"{modelId}_roomContent";
 }
 
-<div class="row">
+<div id="@repeaterRowId" class="row" data-repeater-row="@modelId">
   <div class="col">
     <div class="card mb-1">
       <div class="card-header alert-warning" id="@roomContentCardHeaderId">

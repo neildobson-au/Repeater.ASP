@@ -10,6 +10,16 @@ namespace Repeater.ASP.Pages
         [BindProperty]
         public AustralianHomesViewModel AustralianHomes { get; set; }
 
+        #region Templates
+
+        public State EmptyState { get; set; } = new State();
+        public Location EmptyLocation { get; set; } = new Location();
+        public Street EmptyStreet { get; set; } = new Street();
+        public Home EmptyHome { get; set; } = new Home();
+        public Room EmptyRoom { get; set; } = new Room();
+
+        #endregion
+
         public void OnGet()
         {
             AustralianHomes = new AustralianHomesViewModel

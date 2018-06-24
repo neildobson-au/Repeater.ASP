@@ -10,8 +10,15 @@
       <h2>Australian Homes</h2>
     </div>
   </div>
-  <form method="POST">        
+  <form method="POST">
     @Html.EditorFor(m => m.AustralianHomes)
   </form>
 </div>
 
+<div style="display: none">
+  @Html.EditorFor(m => m.EmptyState)
+  @Html.EditorFor(m => m.EmptyLocation)
+  @Html.EditorFor(m => m.EmptyStreet)
+  @Html.EditorFor(m => m.EmptyHome)
+  @Html.EditorFor(m => m.EmptyRoom)
+</div>
