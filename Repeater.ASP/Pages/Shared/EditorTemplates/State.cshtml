@@ -8,6 +8,7 @@
   var addButtonId = $"{modelId}_addButton";
 }
 
+@Html.HiddenFor(m => m.StateId)
 <div id="@repeaterRowId" class="row" data-repeater-row="@modelId">
   <div class="col">
     <div class="card mb-1">
