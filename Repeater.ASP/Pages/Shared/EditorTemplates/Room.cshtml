@@ -7,8 +7,8 @@
   var roomContentId = $"{modelId}_roomContent";
 }
 
-@Html.HiddenFor(m => m.RoomId)
 <div id="@repeaterRowId" class="row" data-repeater-row="@modelId">
+  @Html.HiddenFor(m => m.RoomId)
   <div class="col">
     <div class="card mb-1">
       <div class="card-header alert-warning" id="@roomContentCardHeaderId">
